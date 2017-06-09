@@ -1,0 +1,154 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/*Loader*/
+.loader {
+    background: none repeat scroll 0 0 #ffffff;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.loader .loader_inner {
+    background-image: url("../img/preloader.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-posirion: center center;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+
+/*LOGO ANIMATION*/
+.logo {
+    width: 50px;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+
+    background-color: #5bc0de;
+    text-align: center;
+
+}
+
+
+.btn-custom {
+    background: #2196F3;
+    color: #fff;
+    padding: 20px 40px;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    border: 1px solid #2196F3;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+	FORM
+========================================================================== */
+
+.btn-group {
+    display: block;
+}
+
+.help-block {
+    color: #ff1706 !important;
+}
+
+.modal-header {
+    padding: 15px 15px 0;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.form-control:focus {
+    border-color: #8c7a7a;
+    box-shadow: none;
+}
+
+.device-color, .memory {
+    margin-bottom: 60px;
+}
+
+.radio-btn-1 {
+    width: 50%;
+}
+
+.radio-btn-2 {
+    width: 50%;
+}
+
+.radius-right-left {
+    border-radius: 5px 5px 5px 5px !important;
+}
+
+span.glyphicon {
+    opacity: 0;
+}
+
+span.tip {
+    opacity: 0.5;
+}
+
+.active span.glyphicon, .active span.tip {
+    opacity: 1;
+}
+
+.space {
+    background-color: #666;
+}
+
+.silver {
+    background: #ccc;
+}
+
+.rose {
+    background-color: #f99;
+}
+
+.gold {
+    background-color: #f90;
+}
+
+.black {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.black:hover {
+    color: #ffffff;
+}
+
+
+
