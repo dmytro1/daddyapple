@@ -75,9 +75,10 @@ mail( $to, $subject, $message, $headers );
 <head>
     <meta charset="utf-8">
     <title>Информация</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -124,13 +125,17 @@ mail( $to, $subject, $message, $headers );
 
 		<?php } else { ?>
 
-            <p>Средняя рыночная цена на б/у <?= $model ?>, <?= $memory ?>, <?= $color ?> составляет <?= $price ?>
-                грн</p>
-            <p>Данная модель сейчас есть в наличии: <?= $amount ?> шт.</p>
+            <p>Средняя рыночная цена на б/у <br><strong><?= $model ?>, <?= $memory ?>, <?= $color ?></strong><br>
+                составляет <strong><?= $price ?> грн</strong></p>
+            <p>Данная модель сейчас <br>есть в наличии: <strong><?= $amount ?> шт.</strong></p>
             <p>Узнать актуальную цену и получить видео-обзор подходящего iPhone:</p>
-            <button>email</button>
-            <button>viber</button>
-            <button>telegram</button>
+
+            <div class="btn-group">
+                <a href="" class="btn btn-default"><i class="fa fa-envelope" aria-hidden="true"></i> email</a>
+                <a href="" class="btn btn-default"><img src="img/viber.png" width="15"> viber</a>
+                <a href="" class="btn btn-default"><i class="fa fa-telegram" aria-hidden="true"></i> telegram</a>
+            </div>
+            <br><br>
             <p>Или мы можем сообщить Вам лично:</p>
             <form id="telForm" action="" method="post">
                 <input style="display: none" name="memory" value="<?= $memory ?>">
@@ -139,6 +144,7 @@ mail( $to, $subject, $message, $headers );
                 <input type="tel" class="form-control" id="phone2" name="phone" placeholder="Ваш телефон" required>
                 <button type="submit" class="btn btn-custom">позвонить</button>
             </form>
+            <br>
             <a href="<?= $main_url ?>">вернутся к выбору параметров</a>
 
 
