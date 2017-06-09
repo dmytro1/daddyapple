@@ -110,7 +110,7 @@ header {
 }
 
 .radius-right-left {
-    border-radius: 5px 5px 5px 5px !important;
+    border-radius: 5px !important;
 }
 
 span.glyphicon {

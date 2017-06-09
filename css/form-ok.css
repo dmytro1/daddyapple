@@ -11,7 +11,7 @@ body {
 
 .block_success {
     max-width: 960px;
-    padding: 70px 30px 70px 30px;
+    padding: 70px 10px;
     margin: -50px auto;
     text-align: center;
 }

@@ -1,55 +1,55 @@
 <?php
 
 //$name = stripslashes(htmlspecialchars($_POST['name']));
-$phone = stripslashes(htmlspecialchars($_POST['phone']));
-$color = stripslashes(htmlspecialchars($_POST['color']));
-$memory = stripslashes(htmlspecialchars($_POST['memory']));
-$model = stripslashes(htmlspecialchars($_POST['model']));
+$phone  = stripslashes( htmlspecialchars( $_POST['phone'] ) );
+$color  = stripslashes( htmlspecialchars( $_POST['color'] ) );
+$memory = stripslashes( htmlspecialchars( $_POST['memory'] ) );
+$model  = stripslashes( htmlspecialchars( $_POST['model'] ) );
 
 $user_ip = $_SERVER['REMOTE_ADDR'];
 
-switch ($model) {
-    case 'iPhone 5s':
-        $price = 4000;
-        $amount = 3;
-        break;
-    case 'iPhone 6':
-        $price = 7000;
-        $amount = 4;
-        break;
-    case 'iPhone 6 plus':
-        $price = 8000;
-        $amount = 5;
-        break;
-    case 'iPhone 6s':
-        $price = 10000;
-        $amount = 6;
-        break;
-    case 'iPhone 6s plus':
-        $price = 12000;
-        $amount = 7;
-        break;
-    case 'iPhone 7':
-        $price = 15000;
-        $amount = 8;
-        break;
-    case 'iPhone 7 plus':
-        $price = 20000;
-        $amount = 9;
-        break;
+switch ( $model ) {
+	case 'iPhone 5s':
+		$price  = 4000;
+		$amount = 3;
+		break;
+	case 'iPhone 6':
+		$price  = 7000;
+		$amount = 4;
+		break;
+	case 'iPhone 6 plus':
+		$price  = 8000;
+		$amount = 5;
+		break;
+	case 'iPhone 6s':
+		$price  = 10000;
+		$amount = 6;
+		break;
+	case 'iPhone 6s plus':
+		$price  = 12000;
+		$amount = 7;
+		break;
+	case 'iPhone 7':
+		$price  = 15000;
+		$amount = 8;
+		break;
+	case 'iPhone 7 plus':
+		$price  = 20000;
+		$amount = 9;
+		break;
 }
 
-date_default_timezone_set('Europe/Kiev');
-$curr_date = date("d-m-Y");
-$curr_time = date("H:i:s");
+date_default_timezone_set( 'Europe/Kiev' );
+$curr_date = date( "d-m-Y" );
+$curr_time = date( "H:i:s" );
 
 $subject = 'Daddy Apple';
-$to = "";
+$to      = "";
 
 $message = '<html><body>';
 $message .= '<table border="1" cellspacing="0" cellpadding="5">';
 $message .= "<tr><td>IP чувака</td><td>" . $user_ip . "</td></tr>";
-$message .= "<tr><td>Дата</td><td>" . $curr_date . " " . $curr_time .    "</td></tr>";
+$message .= "<tr><td>Дата</td><td>" . $curr_date . " " . $curr_time . "</td></tr>";
 //$message .= "<tr><td>Ім'я</td><td>" . $name . "</td></tr>";
 $message .= "<tr><td>Модель</td><td>" . $model . "</td></tr>";
 $message .= "<tr><td>Колір</td><td>" . $color . "</td></tr>";
@@ -61,7 +61,7 @@ $message .= '</body></html>';
 $headers = "From: daddy_apple\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-mail($to, $subject, $message, $headers);
+mail( $to, $subject, $message, $headers );
 
 ?>
 
@@ -76,7 +76,7 @@ mail($to, $subject, $message, $headers);
 </head>
 <body>
 <div class="block_success">
-    <?php if (@$phone) { ?>
+	<?php if ( @$phone ) { ?>
 
         <h2>Спасибо за заявку!</h2>
         <span class="glyphicon glyphicon-ok text-success"></span><br>
@@ -94,7 +94,7 @@ mail($to, $subject, $message, $headers);
         <a href="https://www.instagram.com/_daddy_apple_" target="_blank"><img class="insta-img" src="img/logo.png"
                                                                                width="100"></a>
 
-    <?php } else { ?>
+	<?php } else { ?>
 
         <p>Средняя рыночная цена на б/у <?= $model ?>, <?= $memory ?>, <?= $color ?> составляет <?= $price ?> грн</p>
         <p>Сейчас есть в наличии: <?= $amount ?> телефона</p>
@@ -112,7 +112,7 @@ mail($to, $subject, $message, $headers);
         </form>
 
 
-    <?php } ?>
+	<?php } ?>
 
 
     <!--
