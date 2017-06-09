@@ -76,64 +76,90 @@ mail( $to, $subject, $message, $headers );
     <meta charset="utf-8">
     <title>Информация</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/form-ok.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="block_success">
-	<?php if ( @$phone ) { ?>
+<div class="container">
+    <div class="well text-center">
+		<?php if ( @$phone ) { ?>
 
-        <h2>Спасибо за заявку!</h2>
-        <span class="glyphicon glyphicon-ok text-success"></span><br>
-        <ul class="list_info">
-            <li><span>IP чувака: </span><span id="client"><?= $user_ip ?></span></li>
-            <li><span>Дата: </span><span id="client"><?= $curr_date . ' ' . $curr_time ?></span></li>
-            <li><span>Модель: </span><span id="model"><?= $model ?></span></li>
-            <li><span>Цвет: </span><span id="color"><?= $_POST['color'] ?></span></li>
-            <li><span>Память: </span><span id="memory"><?= $_POST['memory'] ?></span></li>
-            <li><span>Телефон: </span><span id="phone"><?= $phone ?></span></li>
-        </ul>
-        <p>Не забудьте посетить наш Instagram аккаунт:</p>
-        <a class="insta" target="_blank"
-           href="https://www.instagram.com/_daddy_apple_">instagram.com/daddy_apple</a><br><br>
-        <a href="https://www.instagram.com/_daddy_apple_" target="_blank"><img class="insta-img" src="img/logo.png"
-                                                                               width="100"></a>
+            <h2>Спасибо за заявку!</h2>
+            <span class="glyphicon glyphicon-ok text-success"></span><br>
 
-	<?php } else { ?>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>IP чувака:</td>
+                    <td><?= $user_ip ?></td>
+                </tr>
+                <tr>
+                    <td>Дата:</td>
+                    <td><?= $curr_date . ' ' . $curr_time ?></td>
+                </tr>
+                <tr>
+                    <td>Модель:</td>
+                    <td><?= $model ?></td>
+                </tr>
+                <tr>
+                    <td>Цвет:</td>
+                    <td><?= $_POST['color'] ?></td>
+                </tr>
+                <tr>
+                    <td>Память:</td>
+                    <td><?= $_POST['memory'] ?></td>
+                </tr>
+                <tr>
+                    <td>Телефон:</td>
+                    <td><?= $phone ?></td>
+                </tr>
+                </tbody>
+            </table>
 
-        <p>Средняя рыночная цена на б/у <?= $model ?>, <?= $memory ?>, <?= $color ?> составляет <?= $price ?> грн</p>
-        <p>Данная модель сейчас есть в наличии: <?= $amount ?> шт.</p>
-        <p>Узнать актуальную цену и получить видео-обзор подходящего iPhone:</p>
-        <button>email</button>
-        <button>viber</button>
-        <button>telegram</button>
-        <p>Или мы можем сообщить Вам лично:</p>
-        <form id="telForm" action="" method="post">
-            <input style="display: none" name="memory" value="<?= $memory ?>">
-            <input style="display: none" name="color" value="<?= $color ?>">
-            <input style="display: none" name="model" value="<?= $model ?>">
-            <input type="tel" class="form-control" id="phone2" name="phone" placeholder="Ваш телефон" required>
-            <button type="submit" class="btn btn-custom">позвонить</button>
-        </form>
-        <a href="<?= $main_url ?>">вернутся к выбору параметров</a>
+            <p>Не забудьте посетить наш Instagram аккаунт:</p>
+            <a class="insta" target="_blank"
+               href="https://www.instagram.com/_daddy_apple_">instagram.com/daddy_apple</a><br><br>
+            <a href="https://www.instagram.com/_daddy_apple_" target="_blank"><img class="insta-img" src="img/logo.png"
+                                                                                   width="100"></a>
+
+		<?php } else { ?>
+
+            <p>Средняя рыночная цена на б/у <?= $model ?>, <?= $memory ?>, <?= $color ?> составляет <?= $price ?>
+                грн</p>
+            <p>Данная модель сейчас есть в наличии: <?= $amount ?> шт.</p>
+            <p>Узнать актуальную цену и получить видео-обзор подходящего iPhone:</p>
+            <button>email</button>
+            <button>viber</button>
+            <button>telegram</button>
+            <p>Или мы можем сообщить Вам лично:</p>
+            <form id="telForm" action="" method="post">
+                <input style="display: none" name="memory" value="<?= $memory ?>">
+                <input style="display: none" name="color" value="<?= $color ?>">
+                <input style="display: none" name="model" value="<?= $model ?>">
+                <input type="tel" class="form-control" id="phone2" name="phone" placeholder="Ваш телефон" required>
+                <button type="submit" class="btn btn-custom">позвонить</button>
+            </form>
+            <a href="<?= $main_url ?>">вернутся к выбору параметров</a>
 
 
-	<?php } ?>
+		<?php } ?>
 
 
-    <!--
-    <p>Не забудьте посетить наш Instagram аккаунт:</p>
-    <a class="insta" target="_blank"
-       href="https://www.instagram.com/_daddy_apple_">instagram.com/daddy_apple</a><br><br>
-    <a href="https://www.instagram.com/_daddy_apple_" target="_blank"><img class="insta-img" src="img/logo.png" width="100"></a>
--->
+        <!--
+		<p>Не забудьте посетить наш Instagram аккаунт:</p>
+		<a class="insta" target="_blank"
+		   href="https://www.instagram.com/_daddy_apple_">instagram.com/daddy_apple</a><br><br>
+		<a href="https://www.instagram.com/_daddy_apple_" target="_blank"><img class="insta-img" src="img/logo.png" width="100"></a>
+	-->
+    </div>
+
+
 </div>
 
-
-</div>
 <script src="js/jquery.js"></script>
 <script src="js/main.js"></script>
 <script src="js/jquery.maskedinput.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

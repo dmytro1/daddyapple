@@ -57,7 +57,6 @@ header {
 
 }
 
-
 .btn-custom {
     background: #2196F3;
     color: #fff;
@@ -149,6 +148,32 @@ span.tip {
 .black:hover {
     color: #ffffff;
 }
+
+/* ==========================================================================
+	LEAD FORM STYLES
+========================================================================== */
+
+.well {
+    margin: 10px 0;
+    padding: 15px !important;
+}
+
+.text-success {
+    font-size: 80px;
+    padding: 20px 0;
+    opacity: 1 !important;
+}
+
+.insta {
+    color: #69B9FF;
+    text-decoration: underline;
+}
+
+.insta-img {
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
 
 
 

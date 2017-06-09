@@ -15,7 +15,6 @@
 
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/select_.css" rel="stylesheet">
 
 </head>
 
@@ -37,7 +36,7 @@
         <br>
 
         <div class="row">
-              <img class="img-responsive" src="img/fon.png">
+            <img class="img-responsive" src="img/fon.png">
         </div>
         <br>
         <div class="row">
