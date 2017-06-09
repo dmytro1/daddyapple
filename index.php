@@ -30,16 +30,17 @@
 <!-- HEADER -->
 <header>
     <div class="container">
-        <div class="">
-            <a class="navbar-brand" href=""><img src="img/_logo.png" class="logo" alt="LOGO"></a>
+        <div class="row">
+            <a class="navbar-brand" href=""><img src="img/logo.png" class="logo" alt="LOGO"></a>
             <h4 style="float: right; padding: 20px 20px 0 0; ">+38 095 55 5555</h4>
         </div>
+        <br>
 
-
-        <div class="">
-            <!--            <iframe width="100%" height="270"-->
-            <!--                    src="https://www.youtube.com/embed/4s9zvfljuv4?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1&amp;autoplay=0&amp;modestbranding=1"-->
-            <!--                    frameborder="0" allowfullscreen=""></iframe>-->
+        <div class="row">
+              <img class="img-responsive" src="img/fon.png">
+        </div>
+        <br>
+        <div class="row">
             <div class="form-group">
                 <select name="model" class="btn btn-lg btn-default select">
                     <option value="">Виберіть модель:</option>
@@ -53,6 +54,8 @@
                 </select>
             </div>
         </div>
+
+
         <div class="">
             <div class="col-xs-12 well text-left admin-content" id="">
                 <h2 class="text-center"></h2>

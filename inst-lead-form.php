@@ -6,6 +6,11 @@ $color  = stripslashes( htmlspecialchars( $_POST['color'] ) );
 $memory = stripslashes( htmlspecialchars( $_POST['memory'] ) );
 $model  = stripslashes( htmlspecialchars( $_POST['model'] ) );
 
+$url      = isset( $_SERVER['HTTPS'] ) ? 'https://' : 'http://';
+$url      .= $_SERVER['SERVER_NAME'];
+$url      .= $_SERVER['REQUEST_URI'];
+$main_url = dirname( $url );
+
 $user_ip = $_SERVER['REMOTE_ADDR'];
 
 switch ( $model ) {
@@ -97,7 +102,7 @@ mail( $to, $subject, $message, $headers );
 	<?php } else { ?>
 
         <p>Средняя рыночная цена на б/у <?= $model ?>, <?= $memory ?>, <?= $color ?> составляет <?= $price ?> грн</p>
-        <p>Сейчас есть в наличии: <?= $amount ?> телефона</p>
+        <p>Данная модель сейчас есть в наличии: <?= $amount ?> шт.</p>
         <p>Узнать актуальную цену и получить видео-обзор подходящего iPhone:</p>
         <button>email</button>
         <button>viber</button>
@@ -110,6 +115,7 @@ mail( $to, $subject, $message, $headers );
             <input type="tel" class="form-control" id="phone2" name="phone" placeholder="Ваш телефон" required>
             <button type="submit" class="btn btn-custom">позвонить</button>
         </form>
+        <a href="<?= $main_url ?>">вернутся к выбору параметров</a>
 
 
 	<?php } ?>
